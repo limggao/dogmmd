@@ -1,0 +1,437 @@
+*{	margin: 0;
+    padding: 0;
+    font-family: "寰蒋闆呴粦", "Microsoft YaHei", "glyphicons halflings";
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    background-color: #f0eff7;
+}
+/*澶撮儴淇℃伅寮�濮�*/
+.information{
+    width: 100%;
+    height:3.3rem;
+    background-color: #fff;
+    position: relative;
+}
+.head_portrait{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    left: 5%;top:0.5rem;
+    border-radius: 50%;
+}
+.head_portrait img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.ip_information{
+    width: 70%;
+    height:1.5rem;
+    position: absolute;
+    top: 0.8rem;left:18%;
+}
+.head_m{
+    color: #4c4c4c;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    font-style: normal;
+    font-weight: normal;
+}
+.vip_integral{
+    width: 120%;
+}
+.vip_integral span{
+    width: 50%;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    color: #808080;
+}
+.vip_j{
+    border-right: 1px solid #808080;
+    margin: 0 0.5rem 0 0.5rem;
+}
+/*澶撮儴淇℃伅缁撴潫*/
+/*杞挱鍥惧紑濮�*/
+.ad-hot {
+    height: 7rem;
+    margin-bottom: 0.5rem;
+}
+.banner_01 {
+    width: 100%;
+    height: 7rem;
+}
+.banner_01 img {
+    width: 100%;
+    height: 100%;
+}
+/*杞挱鍥剧粨鏉�*/
+/*棣栭〉椤甸潰寮�濮�*/
+/*鍏呭�煎垎绫诲紑濮�*/
+.recharge{
+    width: 100%;
+    border-top:2px solid #dddddd;
+    border-bottom:2px solid #dddddd;
+    margin-top:0.5rem;
+    background-color: #fff;
+}
+.iocn_p{
+    width: 33%;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    float: left;
+}
+.iocn_p_3{
+    width: 33%;
+    border-bottom: 1px solid #ddd;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    float: left;
+}
+.iocn_p a{
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+.phone_iocn{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 auto;
+}
+.phone_iocn img{
+    width: 100%;
+    height: 100%;
+}
+.iocn_text{
+    font-size: 0.6rem;
+    line-height: 1.8rem;
+    color:#333;
+    text-align: center;
+}
+.clear{ clear:both}
+/*鍏呭�煎垎绫荤粨鏉�*/
+/*棣栭〉椤甸潰缁撴潫*/
+/*璇濊垂鍏呭�煎紑濮�*/
+.phone_recharge{
+    width: 100%;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    margin-top: 0.5rem;
+    background-color: #fff;
+
+}
+.phone{
+    width: 90%;
+    height: 2.3rem;
+    border-bottom:1px solid #ececec;
+    margin: 0.5rem auto;
+    position: relative;
+}
+input{
+    width: 80%;
+    height: 1.5rem;
+    position: absolute;
+    left: 0;top:0.4rem;
+    border:none;
+    outline: none;
+}
+input:focus{outline:none;}
+.iocn_r{
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top:0.2rem;right: 0;
+}
+.iocn_r img{
+    width: 100%;
+    height: 100%;
+}
+.information_xi{
+    width: 90%;
+    height: 1.5rem;
+    font-size: 0.5rem;
+    line-height: 1rem;
+    color: #4c4c4c;
+    margin: 0 auto;
+}
+.subject{
+    color: #919191;
+}
+.subject_01{
+    border-left: 1px solid #919191;
+    margin: 0 0.7rem;
+}
+.phone_bill{
+    width: 90%;
+    margin:  0 auto;
+    position: relative;
+}
+.phone_bill_i{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: #999;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.recharge_shu{
+    width: 30%;
+    border-radius: 8px;
+    float: left;
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.recharge_shu_03{
+    width: 30%;
+    border-radius: 8px;
+    margin: 0 0.7rem;
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    text-align: center;
+    float: left;
+}
+.phone_bill_g{
+    position: absolute;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: #999;
+    top: 0;
+    right: 27px;
+}
+.phone_recharge_01{
+	font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: #999;
+    margin-top: 1%;
+    margin-bottom: 0.5rem;
+}
+.recharge_shu_04{
+    width: 30%;
+    border-radius: 8px;
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    text-align: center;
+    float: left;
+}
+.btn{
+    width: 95%;
+    height: 2rem;
+    margin: 2rem auto 2rem auto;
+    background-color: #0698eb;
+    display: block;
+    border-radius: 8px;
+    border: none;
+}
+.btn a{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color:#fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.color{
+    color: #0698eb;
+    border:1px solid #0698eb;
+    border-radius: 8px;
+}
+.color1{
+    color: #dadada;
+    border:1px solid #dadada;
+    border-radius: 8px;
+}
+/*璇濊垂鍏呭�肩粨鏉�*/
+/*鍥鸿瘽鍏呭�煎紑濮�*/
+.i_com_g{
+    width: 100%;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    background-color: #fff;
+}
+/*鍥鸿瘽鍏呭�肩粨鏉�*/
+/*浼氬憳涓績寮�濮�*/
+.orders{
+    width: 100%;
+    height: 1.5rem;
+}
+.all_orders{
+    font-size: 0.8rem;
+    line-height: 2rem;
+    float: left;
+    color: #333;
+    margin-left: 0.7rem;
+}
+.all_orders_i{
+    width: 0.6rem;
+    height: 0.8rem;
+    float: right;
+    margin-right: 0.7rem;
+    margin-top: 0.35rem;
+}
+.all_orders_i img{
+    width: 100%;
+    height: 100%;
+}
+/*浼氬憳涓績缁撴潫*/
+/*鍔犳补鍗″厖鍊煎紑濮�*/
+.form-horizontal .form-group {
+     margin-right: 0;
+     margin-left: 0.8rem;
+}
+.ba_jd_0i{
+    width: 80%;
+    height: 1.5rem;
+    border-radius: 8px;
+    margin-top: -0.3rem;
+}
+.shu_ru{
+    margin-bottom: 1.5rem;
+}
+.i_olua {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.7rem;
+    line-height: 2rem;
+    color: #aaaaaa;
+    padding-left: 0;
+}
+.phone_bill_ih{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: #999;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+/*鍔犳补鍗″厖鍊肩粨鏉�*/
+
+
+.Earned_points{
+    width: 100%;
+    border-bottom:1px solid #666;
+}
+._points-left{
+    float: left;
+    margin-left: 3%;
+}
+.phone_huf{
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #333;
+}
+.phone_time{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+._points_right{
+    float: right;
+    color: red;
+    font-size: 1.2rem;
+    line-height: 3.5rem;
+    margin-right: 3%;
+}
+.er_ma{
+    width: 10rem;
+    height: 10rem;
+    border:1px solid #333;
+    position: absolute;
+    top:63%;left: 50%;
+    margin-left: -5rem;
+}
+.er_ma img{
+    width: 100%;
+    height: 100%;
+}
+.eurn {
+    width: 16rem;
+    height: 3rem;
+    background:url("../images/btn_iocn_03.png") no-repeat ;
+    background-size:100%  100%;
+    position: absolute;
+    bottom: 3.5%;left: 50%;
+    margin-left: -8rem;
+    color: #7b3719;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2.8rem;
+
+}
+/*信用卡开始*/
+.Credit{
+	width: 100%;
+	margin-top: 2rem;
+}
+.be_jing {
+    width: 5rem;
+    height: 1.5rem;
+    background: url(../images/lanseyiy.png) no-repeat -44px 5PX;
+}
+.be_jing div{
+	font-size: 0.7rem;
+	line-height: 1.8rem;
+	color:#fff;
+	text-align: left;
+	margin-left:5%;
+}
+.Credit_iocn{
+	width: 100%;
+	height: 3rem;
+	background-color: #fff;
+	border-top: 0.5px solid #fff;
+	border-bottom: 2px solid #f0eff7;
+}
+.me_she{
+	width: 1.3rem;
+	height: 1.3rem;
+	margin: 0.8rem 3% 0 5%;
+	float: left;
+}
+.me_she img{
+	width: 100%;
+	height: 100%;
+}
+.min_text{
+	width: 9rem;
+	font-size: 0.8rem;
+	line-height:3rem;
+	color:#333;
+	float: left;
+}
+.min_text i{
+	font-size: 0.7rem;
+	line-height: 3rem;
+	color:red;
+	margin-left: 2%;
+}
+._Apply{
+	width:3rem;
+	height:1.5rem;
+	margin-top: 0.8rem;
+	margin-right: 0.5rem;	
+	float:right;
+	position: relative;
+}
+.shen_qin{
+	font-size:0.8rem;
+	line-height: 1.5rem;
+	color:#666666;
+}
+.shen_qin a{
+    text-decoration: none;
+}
+.jian_douy{
+	width: 0.7rem;
+	height: 0.7rem;
+	position: absolute;
+	right: 0;top:0.2rem
+}

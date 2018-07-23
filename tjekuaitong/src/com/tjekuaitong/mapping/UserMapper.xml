@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjekuaitong.mapper.UserMapper">
+	<insert id="insert" parameterType="com.tjekuaitong.entity.User">
+		insert into user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="openid != null">
+				openid,
+			</if>
+			
+			<if test="nickname != null">
+				nickname,
+			</if>
+			<if test="gender != null">
+				gender,
+			</if>
+			<if test="city != null">
+				city,
+			</if>
+			<if test="country != null">
+				country,
+			</if>
+			<if test="province != null">
+				province,
+			</if>
+			<if test="avatarUrl != null">
+				avatarUrl,
+			</if>
+			<if test="language != null">
+				language,
+			</if>
+			<if test="unionid != null">
+				unionid,
+			</if>
+			<if test="watermark != null">
+				watermark,
+			</if>
+			<if test="appid != null">
+				appid,
+			</if>
+			<if test="timestamp != null">
+				timestamp,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			</trim>
+			<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="openid != null">
+				#{openid},
+			</if>
+			
+			<if test="nickname != null">
+				#{nickname},
+			</if>
+			<if test="gender != null">
+				#{gender},
+			</if>
+			<if test="city != null">
+				#{city},
+			</if>
+			<if test="country != null">
+				#{country},
+			</if>
+			<if test="province != null">
+				#{province},
+			</if>
+			<if test="avatarUrl != null">
+				#{avatarUrl},
+			</if>
+			<if test="language != null">
+				#{language},
+			</if>
+			<if test="unionid != null">
+				#{unionid},
+			</if>
+			<if test="watermark != null">
+				#{watermark},
+			</if>
+			<if test="appid != null">
+				#{appid},
+			</if>
+			<if test="timestamp != null">
+				#{timestamp},
+			</if>
+			<if test="phone != null">
+				#{phone},
+			</if>
+			
+		</trim>
+		</insert>
+		<select id="select" resultType="com.tjekuaitong.entity.Users" parameterType="String">
+     		select * from user
+	     <where>
+	     	<if test="openid != null">
+	     		and openid = #{openid,jdbcType=VARCHAR}
+	     	</if>
+	     	<if test="nickname != null">
+	     		and nickname like #{nickname,jdbcType=VARCHAR}
+	     	</if>
+	     	<if test="gender != null">
+	     		and gender = #{gender,jdbcType=VARCHAR}
+	     	</if>
+	     	<if test="phone != null">
+	     		and phone = #{phone,jdbcType=VARCHAR}
+	     	</if>
+	     </where>
+	    
+ 	 </select>
+ 	 
+ 	   <select id="getLimitUser" resultType="com.tjekuaitong.entity.User" >
+     select * from user   limit #{page},#{pageSize}
+     
+ 	 </select>
+  <select id="countUser" resultType="Integer" >
+     select  count(*) from user  
+  </select>
+  
+  
+  
+  <update id="update" parameterType="com.tjekuaitong.entity.User" >
+  	update user
+  	<set>
+			<if test="nickname != null">
+				nickname = #{nickname,jdbcType=VARCHAR},
+			</if>
+			<if test="gender != null">
+				gender = #{gender,jdbcType=VARCHAR},
+			</if>
+			<if test="city != null">
+				city = #{city,jdbcType=VARCHAR},
+			</if>
+			<if test="country != null">
+				country = #{country,jdbcType=VARCHAR},
+			</if>
+			<if test="province != null">
+				province = #{province,jdbcType=VARCHAR},
+			</if>
+			<if test="avatarUrl != null">
+				avatarUrl = #{avatarUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="language != null">
+				language = #{language,jdbcType=VARCHAR},
+			</if>
+			<if test="unionid != null">
+				unionid = #{unionid,jdbcType=VARCHAR},
+			</if>
+			<if test="watermark != null">
+				watermark = #{watermark,jdbcType=VARCHAR},
+			</if>
+			<if test="appid != null">
+				appid = #{appid,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+	</set>
+	
+	<where>
+			openid = #{openid,jdbcType=VARCHAR}
+     </where>
+  </update>
+  
+</mapper>

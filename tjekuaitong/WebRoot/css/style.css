@@ -1,0 +1,284 @@
+*{	margin: 0;
+    padding: 0;
+    font-family: "寰蒋闆呴粦", "Microsoft YaHei", "glyphicons halflings";
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    background-color: #f0eff7;
+}
+ul{
+    margin-bottom: 1rem;
+}
+.phone_recharge{
+    width: 100%;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    margin-top: 0.5rem;
+    background-color: #fff;
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.game{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #919191;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+.xinxi_op{
+    margin-top: 0.8rem;
+}
+.form-group{
+    margin-left: 0.8rem;
+}
+.game_sh{
+    width: 90%;
+    height:2rem;
+}
+.phone_bill{
+    width: 90%;
+    margin:  0 auto;
+}
+.phone_bill_i{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: #999;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.recharge_shu{
+    width: 30%;
+    border-radius: 8px;
+    float: left;
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.recharge_shu_03{
+    width: 30%;
+    border-radius: 8px;
+    margin: 0 0.7rem;
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    text-align: center;
+    float: left;
+}
+.phone_bill_g{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: #999;
+    margin-top: 8rem;
+    margin-bottom: 0.5rem;
+}
+.recharge_shu_04{
+    width: 30%;
+    border-radius: 8px;
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+    text-align: center;
+    float: left;
+}
+.btn{
+    width: 95%;
+    height: 2rem;
+    margin: 2rem auto 2rem auto;
+    background-color: #0698eb;
+    display: block;
+    border-radius: 8px;
+    border: none;
+}
+.btn a{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color:#fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.color{
+    color: #0698eb;
+    border:1px solid #0698eb;
+    border-radius: 8px;
+}
+.color1{
+    color: #dadada;
+    border:1px solid #dadada;
+    border-radius: 8px;
+}
+.clear{ clear:both}
+.i_olua{
+	padding-left: 0;
+	padding-right: 0;
+}
+.ba_jd_0i{
+	height: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+.shu_ru{
+	padding-left: 0;
+	padding-right: 0;
+	width: 40%;
+	border-radius: 8px;
+}
+.game_02{
+	display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0.6rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #919191;
+    font-weight: 500;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+}
+.method_box{
+    width: 100%;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    margin-top:1.5rem;
+}
+.method{
+    width: 95%;
+    height: 2rem;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
+    color: #919191;
+    font-weight: 500;
+    border-bottom: 1px solid #dddddd;
+    margin: 0 auto 0.5rem auto;
+}
+.method_ic{
+    width: 95%;
+    height: 2rem;
+    border-bottom: 1px solid #dddddd;
+    margin: 0 auto 0.5rem auto;
+    position: relative;
+}
+.weixin{
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    float: left;
+}
+.weixin img{
+    width: 100%;
+    height: 100%;
+}
+.text_wei{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color:#0bba15;
+}
+.xuanzhon{
+    position: absolute;
+    right: 0.5rem;top:-0.2rem
+}
+.method_ic div.zhifubao_z{
+    color:#00aaef;
+}
+/*娴姩璁剧疆寮�濮�*/
+.payment{
+    width: 100%;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    background-color: #fff;
+}
+.payment_io1{
+    width: 100%;
+    border-top:1px solid #dddddd;
+    position: relative;
+}
+.img_head{
+    width: 3.8rem;
+    height: 3.8rem;
+    margin: 0.8rem 0.8rem 1.6rem 0.8rem;
+    border-radius: 8px;
+    float: left;
+}
+.img_head img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.text_jilu{
+    width: 62%;
+    float: left;
+}
+.clear{ clear:both}
+.user_form{
+    width: 100%;
+}
+.user_form span{
+    font-size: 0.5rem;
+    line-height: 0.9rem;
+    color: #4d4d4d;
+}
+.user_form .moi_yt{
+    color:#a6a6a6;
+}
+/*娴姩璁剧疆缁撴潫*/
+#hear {
+    width: 100%;
+    height: 2rem;
+    line-height: 45px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+#hear a {
+    font-weight: normal;
+    color: #636366;
+    text-decoration: none;
+}
+#hear li {
+    text-align: center;
+    float: left;
+    height: 80%;
+}
+#hear li:nth-of-type(1) {
+    width: 25%;
+    float: left;
+    margin-left: 2.75%;
+    font-size: 0.8rem;
+    line-height: 2.5rem;
+}
+#hear li:nth-of-type(2) {
+    width: 36%;
+    float: left;
+    margin-left: 2.75%;
+    margin-right: 2.75%;
+    font-size: 0.8rem;
+    line-height: 2.5rem;
+}
+#hear li:nth-of-type(3) {
+    width: 25%;
+    float: left;
+    margin-left: 2.75%;
+    margin-right: 2.75%;
+    font-size: 0.8rem;
+    line-height: 2.5rem;
+}
+#hear .action{
+    border-bottom: 3px solid #0698eb;
+    height: 98%;
+}
+.jiaofei{
+	float: left;
+	width: 100%;
+}
+.type_box{
+	float: left;
+	margin-left: 5%; 
+    max-width: 100%;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #919191;
+    font-weight: 500;
+}

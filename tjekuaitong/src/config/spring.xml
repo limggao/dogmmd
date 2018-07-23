@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+   ">
+   <bean id = "SpringContextUtil" class = "com.tjekuaitong.uitls.SpringContextUtil"/>
+   <!--  singleton="true" -->
+	<!-- 引入属性文件 -->
+	<context:property-placeholder location="classpath:config/*.properties" />
+	<context:property-placeholder location="classpath:*.properties" />
+	
+    <!-- 只解析除controller之外的注解(即解析service、dao), 避免重复加载导致事务失效 
+    <context:component-scan base-package="com.online">
+        	annotation为spting-mvc中解析的内容
+            <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+     </context:component-scan> 
+     -->
+	<!-- service包(自动注入) -->
+	<context:component-scan base-package="com.tjekuaitong.service" />
+	<!-- dao包(自动注入) -->
+	<context:component-scan base-package="com.tjekuaitong.dao" />
+	<context:component-scan base-package="com.tjekuaitong.component" />
+	<context:component-scan base-package="com.tjekuaitong.uitls" />
+	 <!-- <bean id="user" class="com.tjekuaitong.component.UserComponent" />  
+	 <task:scheduled-tasks>  后面的是1分中執行一次0 0/1 * * * ? 
+	 3分钟执行一次
+    	<task:scheduled ref="user" method="userAll" cron="0 0/3 * * * ? " />  
+    	
+    	<task:scheduled ref="user" method="getQianMiToken" cron="*/5 * * * * ?" />  
+    	
+	</task:scheduled-tasks>   -->
+</beans>

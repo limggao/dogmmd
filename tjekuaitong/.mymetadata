@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="tjekuaitong"
+  id="myeclipse.1489655551205"
+  context-root="/MEIYIHUI"
+  j2ee-spec="6.0"
+  archive="tjekuaitong.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
