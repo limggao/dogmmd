@@ -13,12 +13,12 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
 	@Resource
 	protected SqlSessionTemplate sqlSession;
 	private Class<T> t = null;
-	private static final String INSERT = "insertSelective";   
-	private static final String UPDATE = "updateByPrimaryKeySelective";   
+	private static final String INSERT = "insert";   
+	private static final String UPDATE = "update";   
 	private static final String DELETE = "deleteByPrimaryKey";   
 	private static final String SEARCHBYID = "selectByPrimaryKey"; 
 	private static final String SEARCHLIST = "selectList";
-
+	private static final String SEARCHONE = "selectOne";
 	public void setSqlSession(SqlSessionTemplate sqlSession) {
 		this.sqlSession = sqlSession;
 	}
@@ -32,7 +32,7 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
 
 	//获取实体映射文件的空间名称
 	public String getStatementId(String suffix) { 
-	   return "com.online.mapping."+t.getSimpleName() + "Mapper." + suffix;
+	   return "com.tjekuaitong.mapping."+t.getSimpleName() + "Mapper." + suffix;
     }
     
 	/**
@@ -72,6 +72,13 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
 	 */
 	public List<T> searchList(T t) throws Exception {
 		String sql = this.getStatementId(SEARCHLIST); 
+		return sqlSession.selectList(sql,t);
+	}
+	/**
+	 * 根据实体检索记录
+	 */
+	public List<T> searchOne(T t) throws Exception {
+		String sql = this.getStatementId(SEARCHONE); 
 		return sqlSession.selectList(sql,t);
 	}
 }

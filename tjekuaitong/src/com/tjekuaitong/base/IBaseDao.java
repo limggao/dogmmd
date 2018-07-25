@@ -42,4 +42,11 @@ public interface IBaseDao<T> {
 	 * @return
 	 */
 	public List<T> searchList(T t) throws Exception;
+	/**
+	 * 查询单笔
+	 * @param t
+	 * @return
+	 * @throws Exception
+	 */
+	public List<T> searchOne(T t) throws Exception;
 }

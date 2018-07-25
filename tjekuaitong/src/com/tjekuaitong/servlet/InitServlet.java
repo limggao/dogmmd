@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.tjekuaitong.dao.UserDao;
-import com.tjekuaitong.dao.impl.UserDaoImlp;
-import com.tjekuaitong.entity.PaymentMethod;
 import com.tjekuaitong.uitls.CommonUtils;
 import com.tjekuaitong.uitls.TokenThread;
 

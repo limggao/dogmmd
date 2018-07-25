@@ -56,7 +56,6 @@ import org.apache.log4j.Logger;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.tjekuaitong.entity.User;
-import com.tjekuaitong.entity.UserId;
 import com.tjekuaitong.entity.button.Button;
 import com.tjekuaitong.entity.button.ClickButton;
 import com.tjekuaitong.entity.button.Menu;
@@ -324,7 +323,7 @@ public class WeixinUtil {
 	/**
 	 * 获取所有用户
 	 * @return
-	 */
+	 *//*
 	public static UserId userAllId(String ACCESSTOKEN){
 		UserId user =new UserId();
 		String url =USERID_URL.replace("ACCESS_TOKEN", ACCESSTOKEN).replace("NEXT_OPENID", "");
@@ -337,7 +336,7 @@ public class WeixinUtil {
 			user.setNext_openid(jsonObject.getString("next_openid"));
 		}
 		return user;
-	}
+	}*/
 /*	//获取一个用户所有信息
 	public static User userAll(String openId,String ACCESSTOKEN){
 		User user =new User();

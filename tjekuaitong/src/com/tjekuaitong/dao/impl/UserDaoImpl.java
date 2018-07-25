@@ -1,21 +1,26 @@
 package com.tjekuaitong.dao.impl;
 
 import java.util.List;
-import java.util.Map;
 
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.tjekuaitong.base.BaseDaoImpl;
 import com.tjekuaitong.dao.UserDao;
-import com.tjekuaitong.entity.Link;
 import com.tjekuaitong.entity.User;
 import com.tjekuaitong.mapper.UserMapper;
 
 @Repository
-public class UserDaoImlp extends BaseDaoImpl<User> implements UserDao{
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 
 	@Override
+	public int inserts(User user) {
+		String sql = this.getStatementId("inserts");   
+		return sqlSession.insert(sql,user);
+	}
+
+	
+	
+	/*@Override
 	public List<User> getLimitUser(int page,
 			int pageSize) {
 		
@@ -34,13 +39,18 @@ public class UserDaoImlp extends BaseDaoImpl<User> implements UserDao{
 	}
 
 	@Override
-	public int update(User user){
-		int i ;
+	public boolean inserts(User user) {
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-		i=mapper.update(user);
-		return 0;
+		return mapper.inserts(user);
 	}
 
+	@Override
+	public int update(User user) {
+		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+		return mapper.updates(user);
+	}
+*/
 
+	
 	
 }

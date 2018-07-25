@@ -6,19 +6,21 @@ package com.tjekuaitong.entity;
  */
 public class User {
 
-	private String openid;
-	private String nickname;
-	private String gender;
-	private String city;
-	private String country;
-	private String province;
-	private String avatarUrl;
-	private String language;
+	private String openid;//openid
+	private String nickname;//名字
+	private String gender;//性别
+	private String city;//城市
+	private String country;//国家
+	private String province;//省份
+	private String avatarUrl;//头像url
+	private String language;//用户的语言，简体中文为zh_CN
 	private String unionid;
 	private String watermark;
 	private String appid;
 	private String timestamp;
 	private String phone;
+	private String user_grade;//用户等级
+	private String category;//等级名称
 	public String getOpenid() {
 		return openid;
 	}
@@ -97,13 +99,26 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public String getUser_grade() {
+		return user_grade;
+	}
+	public void setUser_grade(String user_grade) {
+		this.user_grade = user_grade;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
 	@Override
 	public String toString() {
 		return "User [openid=" + openid + ", nickname=" + nickname + ", gender=" + gender + ", city=" + city
 				+ ", country=" + country + ", province=" + province + ", avatarUrl=" + avatarUrl + ", language="
 				+ language + ", unionid=" + unionid + ", watermark=" + watermark + ", appid=" + appid + ", timestamp="
-				+ timestamp + ", phone=" + phone + "]";
+				+ timestamp + ", phone=" + phone + ", user_grade=" + user_grade + ", category=" + category + "]";
 	}
+	
 	
 	
 }
