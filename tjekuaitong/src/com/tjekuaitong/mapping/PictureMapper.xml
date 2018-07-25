@@ -32,7 +32,7 @@
 			0
 		</trim>
 	</insert>
-	<select id="select" resultType="com.tjekuaitong.entity.Picture"
+	<select id="selectList" resultType="com.tjekuaitong.entity.Picture"
 		parameterType="String">
 		select * from picture
 		<where>

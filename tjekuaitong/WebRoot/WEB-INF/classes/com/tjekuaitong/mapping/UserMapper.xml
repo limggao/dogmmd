@@ -88,7 +88,7 @@
 
 		</trim>
 	</insert>
-	<select id="selectList" resultType="com.tjekuaitong.entity.User"
+	<select id="select" resultType="com.tjekuaitong.entity.User"
 		parameterType="String">
 		select * from user
 		<where>

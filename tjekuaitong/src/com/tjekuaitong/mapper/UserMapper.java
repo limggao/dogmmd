@@ -13,9 +13,9 @@ public interface UserMapper {
 		public boolean inserts(User user) ;
 		
 		
-		public List<User> getLimitUser(@Param("page")int page,@Param("pageSize")int pageSize);
+	/*	public List<User> getLimitUser(@Param("page")int page,@Param("pageSize")int pageSize);
 
 		public Integer countUser();
-
+*/
 		int updates(User user);
 }
