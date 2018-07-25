@@ -22,7 +22,7 @@ public class TestController {
 	@Test
 	public void ss() {
 		Picture picture =new Picture();
-		picture.setPicture_id("1");
+		picture.setProduct_id("1");
 		List<Picture> list=null;
 		try {
 			list = dao.searchList(picture);

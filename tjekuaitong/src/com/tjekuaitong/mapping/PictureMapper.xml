@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tjekuaitong.mapper.UserMapper">
+<mapper namespace="com.tjekuaitong.mapping.PictureMapper">
 	<insert id="insert" parameterType="com.tjekuaitong.entity.Picture">
 		insert into picture
 		<trim prefix="(" suffix=")" suffixOverrides=",">
@@ -36,8 +36,8 @@
 		parameterType="String">
 		select * from picture
 		<where>
-			<if test="picture_id !=null">
-				and picture_id = #{picture_id,jdbcType=VARCHAR}
+			<if test="product_id !=null">
+				and product_id = #{product_id,jdbcType=VARCHAR}
 			</if>
 			and is_hidden='0'
 		</where>
