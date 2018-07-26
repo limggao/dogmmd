@@ -14,6 +14,14 @@ public class ViewProductGradeType<T> {
 	private String drade_name;//分类名称
 	private String type_name;//类别名称
 	private List<T> children;
+	private Integer common_id;
+	
+	public Integer getCommon_id() {
+		return common_id;
+	}
+	public void setCommon_id(Integer common_id) {
+		this.common_id = common_id;
+	}
 	public Integer getProduct_id() {
 		return product_id;
 	}

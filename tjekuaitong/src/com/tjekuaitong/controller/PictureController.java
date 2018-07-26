@@ -46,6 +46,7 @@ public class PictureController {
 				gradeType.setProduct_num(productList.get(0).getProduct_num());
 				gradeType.setProduct_price(productList.get(0).getProduct_price());
 				gradeType.setProduct_type(Integer.parseInt(productList.get(0).getProduct_type()));
+				gradeType.setCommon_id(1);
 			}
 			OutString.outString(response, JSON.toJSON(gradeType));
 		} catch (Exception e) {

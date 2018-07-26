@@ -50,6 +50,9 @@ public class ViewProductGradeTypeController extends BaseController{
 				Product product =new Product();
 				product.setProduct_type(productType.getId().toString());
 				List<Product> ductList=ductService.selectList(product);
+				if(ductList.size()<1) {
+					continue;
+				}
 				ductGrade.setChildren(ductList);
 				productGradeType.add(ductGrade);
 			}
