@@ -37,7 +37,7 @@
 		select * from picture
 		<where>
 			<if test="product_id !=null">
-				and product_id = #{product_id,jdbcType=VARCHAR}
+				and product_id = #{product_id}
 			</if>
 			and is_hidden='0'
 		</where>

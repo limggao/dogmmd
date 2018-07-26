@@ -1,6 +1,5 @@
 package com.tjekuaitong.dao.impl;
 
-import java.util.List;
 
 import org.springframework.stereotype.Repository;
 

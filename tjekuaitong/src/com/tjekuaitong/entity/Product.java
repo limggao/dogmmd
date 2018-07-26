@@ -1,19 +1,21 @@
 package com.tjekuaitong.entity;
 
 public class Product {
-	private Integer id;
+	private Integer product_id;
 	private String product_name;//商品名称
 	private String product_desc;//商品说明
 	private String product_type;//商品种类
 	private String product_grade;//商品分类
-	private String product_price;//商品单价金额
-	private String product_num;//商品数量
+	private Integer product_price;//商品单价金额
+	private Integer product_num;//商品数量
 	private String is_hidden;//是否显示
-	public Integer getId() {
-		return id;
+	private String url;
+	
+	public Integer getProduct_id() {
+		return product_id;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public void setProduct_id(Integer product_id) {
+		this.product_id = product_id;
 	}
 	public String getProduct_name() {
 		return product_name;
@@ -39,16 +41,16 @@ public class Product {
 	public void setProduct_grade(String product_grade) {
 		this.product_grade = product_grade;
 	}
-	public String getProduct_price() {
+	public Integer getProduct_price() {
 		return product_price;
 	}
-	public void setProduct_price(String product_price) {
+	public void setProduct_price(Integer product_price) {
 		this.product_price = product_price;
 	}
-	public String getProduct_num() {
+	public Integer getProduct_num() {
 		return product_num;
 	}
-	public void setProduct_num(String product_num) {
+	public void setProduct_num(Integer product_num) {
 		this.product_num = product_num;
 	}
 	public String getIs_hidden() {
@@ -57,11 +59,18 @@ public class Product {
 	public void setIs_hidden(String is_hidden) {
 		this.is_hidden = is_hidden;
 	}
+	
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", product_name=" + product_name + ", product_desc=" + product_desc
+		return "Product [product_id=" + product_id + ", product_name=" + product_name + ", product_desc=" + product_desc
 				+ ", product_type=" + product_type + ", product_grade=" + product_grade + ", product_price="
-				+ product_price + ", product_num=" + product_num + ", is_hidden=" + is_hidden + "]";
+				+ product_price + ", product_num=" + product_num + ", is_hidden=" + is_hidden + ", url=" + url + "]";
 	}
 	
 	

@@ -12,7 +12,7 @@
 	
 	<script type="text/javascript">
 		function dianji(){
-			window.location.href="/tjekuaitong/UserController/userAll";
+			window.location.href="/tjekuaitong/ViewProductGradeTypeController/selectList";
 		}
 	</script>
 </body>
