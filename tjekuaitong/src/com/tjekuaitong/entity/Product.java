@@ -9,8 +9,23 @@ public class Product {
 	private Integer product_price;//商品单价金额
 	private Integer product_num;//商品数量
 	private String is_hidden;//是否显示
-	private String url;
+	private String url;//默认图片地址
+	private Integer spec_id;//快递id  暂时没用
+	private Integer common_id;//是否包邮  0包邮
 	
+	
+	public Integer getCommon_id() {
+		return common_id;
+	}
+	public void setCommon_id(Integer common_id) {
+		this.common_id = common_id;
+	}
+	public Integer getSpec_id() {
+		return spec_id;
+	}
+	public void setSpec_id(Integer spec_id) {
+		this.spec_id = spec_id;
+	}
 	public Integer getProduct_id() {
 		return product_id;
 	}

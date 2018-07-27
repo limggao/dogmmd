@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -58,6 +59,24 @@ public class ViewProductGradeTypeController extends BaseController{
 			}
 			
 			OutString.outString(response, JSON.toJSON(productGradeType));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 首页轮播图
+	 * @param request
+	 * @param response
+	 */
+	@RequestMapping(value="banner")
+	public void banner(HttpServletRequest request,HttpServletResponse response) {
+		Product product=new Product();
+		product.setProduct_grade(request.getParameter("product_grade"));
+		try {
+			List<Product> ductList=ductService.selectList(product);
+			OutString.outString(response, JSON.toJSON(ductList));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

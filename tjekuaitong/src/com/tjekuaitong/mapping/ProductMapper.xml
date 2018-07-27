@@ -27,8 +27,9 @@
 			<if test="product_num !=null">
 				and product_num = #{product_num,jdbcType=Integer}
 			</if>
+			and is_hidden=0
 		</where>
-
+		order by add_time desc
 	</select>
 
 </mapper>

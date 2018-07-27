@@ -15,7 +15,22 @@ public class ViewProductGradeType<T> {
 	private String type_name;//类别名称
 	private List<T> children;
 	private Integer common_id;
+	private String spec;//快递名称
+	private String price;//实际快递金额
 	
+	public String getSpec() {
+		return spec;
+	}
+	public void setSpec(String spec) {
+		this.spec = spec;
+	}
+	
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
 	public Integer getCommon_id() {
 		return common_id;
 	}
