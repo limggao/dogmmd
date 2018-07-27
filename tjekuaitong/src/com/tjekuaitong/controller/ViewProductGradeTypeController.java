@@ -73,10 +73,27 @@ public class ViewProductGradeTypeController extends BaseController{
 	@RequestMapping(value="banner")
 	public void banner(HttpServletRequest request,HttpServletResponse response) {
 		Product product=new Product();
-		product.setProduct_grade(request.getParameter("product_grade"));
+		String in =request.getParameter("product_grade");
+		product.setProduct_grade(in);
+		List<Product> ductLists=new ArrayList<>();
 		try {
 			List<Product> ductList=ductService.selectList(product);
-			OutString.outString(response, JSON.toJSON(ductList));
+			if(ductList.size()>4){
+				for (int i = 0; i < 4; i++) {
+					ductLists.add(ductList.get(i));
+				}
+			}else {
+				ductLists=ductList;
+			}
+			
+			/*if(in!=null&&!"".equals(in)) {
+				
+			}else {
+				for (int i = 0; i < 5; i++) {
+					ductLists.add(ductList.get(i));
+				}
+			}*/
+			OutString.outString(response, JSON.toJSON(ductLists));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
