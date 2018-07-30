@@ -99,4 +99,30 @@ public class ViewProductGradeTypeController extends BaseController{
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * 首页宠物明细
+	 * @param request
+	 * @param response
+	 */
+	@RequestMapping(value="index")
+	public void index(HttpServletRequest request,HttpServletResponse response) {
+		ProductType productType=new ProductType();
+		List<ProductType> ductLists=new ArrayList<>();
+		try {
+			List<ProductType> ductList=ductTypeService.selectList(productType);
+			if(ductList.size()>4){
+				for (int i = 0; i < 4; i++) {
+					ductLists.add(ductList.get(i));
+				}
+			}else {
+				ductLists=ductList;
+			}
+			
+			OutString.outString(response, JSON.toJSON(ductLists));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
