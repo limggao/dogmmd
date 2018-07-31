@@ -12,11 +12,6 @@ import com.tjekuaitong.mapper.UserMapper;
 @Repository
 public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 
-	@Override
-	public int inserts(User user) {
-		String sql = this.getStatementId("inserts");   
-		return sqlSession.insert(sql,user);
-	}
 
 	
 	

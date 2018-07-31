@@ -7,5 +7,7 @@ import com.tjekuaitong.entity.User;
 
 public interface UserService {
 
-
+	public List<User> selectList(User user) throws Exception;
+	public User selectOne(User user) throws Exception;
+	public int insert(User user) throws Exception;
 }

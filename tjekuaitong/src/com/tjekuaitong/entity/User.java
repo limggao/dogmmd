@@ -5,7 +5,7 @@ package com.tjekuaitong.entity;
  *
  */
 public class User {
-
+	private String userid;//用户唯一id
 	private String openid;//openid
 	private String nickname;//名字
 	private String gender;//性别
@@ -21,6 +21,15 @@ public class User {
 	private String phone;
 	private String user_grade;//用户等级
 	private String category;//等级名称
+	private Integer balance;//钱包余额
+	private String add_time;//注册时间
+	private Integer jifen;//积分
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
 	public String getOpenid() {
 		return openid;
 	}
@@ -111,12 +120,31 @@ public class User {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	public Integer getBalance() {
+		return balance;
+	}
+	public void setBalance(Integer balance) {
+		this.balance = balance;
+	}
+	public String getAdd_time() {
+		return add_time;
+	}
+	public void setAdd_time(String add_time) {
+		this.add_time = add_time;
+	}
+	public Integer getJifen() {
+		return jifen;
+	}
+	public void setJifen(Integer jifen) {
+		this.jifen = jifen;
+	}
 	@Override
 	public String toString() {
-		return "User [openid=" + openid + ", nickname=" + nickname + ", gender=" + gender + ", city=" + city
-				+ ", country=" + country + ", province=" + province + ", avatarUrl=" + avatarUrl + ", language="
-				+ language + ", unionid=" + unionid + ", watermark=" + watermark + ", appid=" + appid + ", timestamp="
-				+ timestamp + ", phone=" + phone + ", user_grade=" + user_grade + ", category=" + category + "]";
+		return "User [userid=" + userid + ", openid=" + openid + ", nickname=" + nickname + ", gender=" + gender
+				+ ", city=" + city + ", country=" + country + ", province=" + province + ", avatarUrl=" + avatarUrl
+				+ ", language=" + language + ", unionid=" + unionid + ", watermark=" + watermark + ", appid=" + appid
+				+ ", timestamp=" + timestamp + ", phone=" + phone + ", user_grade=" + user_grade + ", category="
+				+ category + ", balance=" + balance + ", add_time=" + add_time + ", jifen=" + jifen + "]";
 	}
 	
 	
