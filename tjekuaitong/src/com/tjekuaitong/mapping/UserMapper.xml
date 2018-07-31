@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tjekuaitong.mapping.UserMapper">
-	<insert id="inserts" parameterType="com.tjekuaitong.entity.User">
+	<insert id="insert" parameterType="com.tjekuaitong.entity.User">
 		insert into user
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="openid != null">
@@ -44,6 +44,10 @@
 			<if test="phone != null">
 				phone,
 			</if>
+			<if test="userid != null">
+				userid,
+			</if>
+			balance,add_time,jifen
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
 			<if test="openid != null">
@@ -85,10 +89,13 @@
 			<if test="phone != null">
 				#{phone},
 			</if>
-
+			<if test="userid != null">
+				#{userid},
+			</if>
+			0,sysdate,0
 		</trim>
 	</insert>
-	<select id="select" resultType="com.tjekuaitong.entity.User"
+	<select id="selectList" resultType="com.tjekuaitong.entity.User"
 		parameterType="String">
 		select * from user
 		<where>
@@ -104,11 +111,31 @@
 			<if test="phone != null">
 				and phone = #{phone,jdbcType=VARCHAR}
 			</if>
+			<if test="userid != null">
+				and userid = #{userid,jdbcType=VARCHAR}
+			</if>
+			
 		</where>
 
 	</select>
+	<select id="selectOne" resultType="com.tjekuaitong.entity.User"
+		parameterType="String">
+		select * from user
+		<where>
+			<if test="openid != null">
+				and openid = #{openid,jdbcType=VARCHAR}
+			</if>
+			<if test="phone != null">
+				and phone = #{phone,jdbcType=VARCHAR}
+			</if>
+			<if test="userid != null">
+				and userid = #{userid,jdbcType=VARCHAR}
+			</if>
+			
+		</where>
 
-	<update id="updates" parameterType="com.tjekuaitong.entity.User">
+	</select>
+	<update id="update" parameterType="com.tjekuaitong.entity.User">
 		update user
 		<set>
 			<if test="nickname != null">
@@ -146,7 +173,13 @@
 			</if>
 		</set>
 		<where>
-			openid = #{openid,jdbcType=VARCHAR}
+			<if test="openid != null">
+				and openid = #{openid,jdbcType=VARCHAR}
+			</if>
+			<if test="userid != null">
+				and userid = #{userid,jdbcType=VARCHAR}
+			</if>
+			
 		</where>
 	</update>
 

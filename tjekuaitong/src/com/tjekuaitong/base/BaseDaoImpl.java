@@ -77,7 +77,7 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
 	/**
 	 * 根据实体检索记录
 	 */
-	public List<T> searchOne(T t) throws Exception {
+	public T searchOne(T t) throws Exception {
 		String sql = this.getStatementId(SEARCHONE); 
 		return sqlSession.selectOne(sql,t);
 	}

@@ -8,7 +8,6 @@ import com.tjekuaitong.entity.User;
 
 public interface UserDao extends IBaseDao<User>{
 	
-	int inserts(User user);
 	
 	//修改个人信息
 	

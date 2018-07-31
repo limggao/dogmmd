@@ -17,11 +17,11 @@
 		<!-- 配置获取access_token所需参数appid和appsecret -->
 		<init-param>
 			<param-name>appid</param-name>
-			<param-value>wx0bbdff5953b7b1cd</param-value>
+			<param-value>wxc3c2070a4dcbbcd4</param-value>
 		</init-param>
 		<init-param>
 			<param-name>appsecret</param-name>
-			<param-value>8e92135db8afeadedebb7be1d57ce086</param-value>
+			<param-value>33ce76223f652f51dc05a47e253c4efa</param-value>
 		</init-param>
 		<init-param>
 			<param-name>dns</param-name>

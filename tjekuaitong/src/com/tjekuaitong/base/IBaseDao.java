@@ -48,5 +48,5 @@ public interface IBaseDao<T> {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<T> searchOne(T t) throws Exception;
+	public T searchOne(T t) throws Exception;
 }
