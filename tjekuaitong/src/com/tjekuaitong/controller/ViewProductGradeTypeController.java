@@ -2,7 +2,9 @@ package com.tjekuaitong.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -76,6 +78,7 @@ public class ViewProductGradeTypeController extends BaseController{
 		String in =request.getParameter("product_grade");
 		product.setProduct_grade(in);
 		List<Product> ductLists=new ArrayList<>();
+		Map<String, List> map =new HashMap<>();
 		try {
 			List<Product> ductList=ductService.selectList(product);
 			if(ductList.size()>6){
@@ -85,15 +88,9 @@ public class ViewProductGradeTypeController extends BaseController{
 			}else {
 				ductLists=ductList;
 			}
-			
-			/*if(in!=null&&!"".equals(in)) {
-				
-			}else {
-				for (int i = 0; i < 5; i++) {
-					ductLists.add(ductList.get(i));
-				}
-			}*/
-			OutString.outString(response, JSON.toJSON(ductLists));
+			map.put("data", ductLists);
+			map.put("notice", ductLists);
+			OutString.outString(response, JSON.toJSON(map));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
