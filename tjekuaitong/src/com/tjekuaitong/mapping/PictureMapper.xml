@@ -57,7 +57,7 @@
 			</if>
 		</set>
 		<where>
-			id = #{id,jdbcType=VARCHAR}
+			id = #{id,jdbcType=Integer}
 		</where>
 	</update>
 

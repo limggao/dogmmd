@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tjekuaitong.mapping.orderMapper">
+<mapper namespace="com.tjekuaitong.mapping.OrderMapper">
 	<insert id="insert" parameterType="com.tjekuaitong.entity.Order">
 		insert into Order
 		<trim prefix="(" suffix=")" suffixOverrides=",">
@@ -127,36 +127,113 @@
 			0
 		</trim>
 	</insert>
-	<select id="selectList" resultType="com.tjekuaitong.entity.Picture"
+	<select id="selectList" resultType="com.tjekuaitong.entity.Order"
 		parameterType="String">
-		select * from picture
+		select * from oeder
 		<where>
 			<if test="product_id !=null">
 				and product_id = #{product_id}
 			</if>
+			<if test="product_type !=null">
+				and product_type = #{product_type}
+			</if>
+			<if test="sepc_id !=null">
+				and sepc_id = #{sepc_id}
+			</if>
+			<if test="openid !=null">
+				and openid = #{openid}
+			</if>
+			<if test="userid !=null">
+				and userid = #{userid}
+			</if>
+			<if test="pay_status !=null">
+				and pay_status = #{pay_status}
+			</if>
+			<if test="order_status !=null">
+				and order_status = #{order_status}
+			</if>
+			<if test="sepc_status !=null">
+				and sepc_status = #{sepc_status}
+			</if>
+			<if test="orderid !=null">
+				and orderid = #{orderid}
+			</if>
 			and is_hidden='0'
 		</where>
-
+		order by add_time desc
 	</select>
 
+
+	<select id="selectOne" resultType="com.tjekuaitong.entity.Order"
+		parameterType="String">
+		select * from oeder
+		<where>
+			<if test="product_id !=null">
+				and product_id = #{product_id}
+			</if>
+			<if test="product_type !=null">
+				and product_type = #{product_type}
+			</if>
+			<if test="sepc_id !=null">
+				and sepc_id = #{sepc_id}
+			</if>
+			<if test="openid !=null">
+				and openid = #{openid}
+			</if>
+			<if test="userid !=null">
+				and userid = #{userid}
+			</if>
+			<if test="pay_status !=null">
+				and pay_status = #{pay_status}
+			</if>
+			<if test="order_status !=null">
+				and order_status = #{order_status}
+			</if>
+			<if test="sepc_status !=null">
+				and sepc_status = #{sepc_status}
+			</if>
+			<if test="orderid !=null">
+				and orderid = #{orderid}
+			</if>
+			and is_hidden='0'
+		</where>
+		order by add_time desc
+	</select>
 	<update id="update" parameterType="com.tjekuaitong.entity.Picture">
-		update Picture
+		update order
 		<set>
-			<if test="picture_id != null">
-				picture_id = #{picture_id,jdbcType=VARCHAR},
+			<if test="pay_status != null">
+				pay_status = #{pay_status,jdbcType=VARCHAR},
 			</if>
-			<if test="url != null">
-				url = #{url,jdbcType=VARCHAR},
+			<if test="order_status != null">
+				order_status = #{order_status,jdbcType=VARCHAR},
 			</if>
-			<if test="add_time != null">
-				add_time = #{add_time,jdbcType=VARCHAR},
+			<if test="sepc_status != null">
+				sepc_status = #{sepc_status,jdbcType=VARCHAR},
+			</if>
+			<if test="pay_time != null">
+				pay_time = #{pay_time,jdbcType=VARCHAR},
+			</if>
+			<if test="sepc_time != null">
+				sepc_time = #{sepc_time,jdbcType=VARCHAR},
 			</if>
 			<if test="is_hidden != null">
-				is_hidden = #{is_hidden,jdbcType=VARCHAR},
+				is_hidden = #{is_hidden,jdbcType=Integer},
 			</if>
 		</set>
 		<where>
-			id = #{id,jdbcType=VARCHAR}
+			<if test="orderid !=null">
+				and orderid = #{orderid,jdbcType=VARCHAR}
+			</if>
+			<if test="product_id !=null">
+				and product_id = #{product_id,jdbcType=Integer}
+			</if>
+			<if test="userid !=null">
+				and userid = #{userid,jdbcType=VARCHAR}
+			</if>
+			<if test="id !=null">
+				and id = #{id,jdbcType=Integer}
+			</if>
 		</where>
 	</update>
 
